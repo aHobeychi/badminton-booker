@@ -2,7 +2,7 @@ name: Badminton Court Booking
 
 on:
   schedule:
-      - cron: '0 13,17,21,1 * * *'  # 8AM, 12PM, 4PM, 8PM EST (13:00, 17:00, 21:00, 01:00 UTC)
+      - cron: '0 13,0 * * *'  # 8AM, 12PM, 4PM, 8PM EST (13:00, 17:00, 21:00, 01:00 UTC)
   workflow_dispatch:
 
 jobs:
