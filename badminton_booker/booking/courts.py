@@ -134,16 +134,16 @@ async def check_available_courts(args):
             return None
         
         await page.goto(url)
-        
-        # Click on 'Reserve a space' link
-        await page.get_by_role('link', name='Reserve a space').click()
-        
+
         # Accept cookies
-        await page.get_by_role('button', name='Accepter tout').click()
+        await page.get_by_role("button", name="Accepter tout").click()
+
+        # Click on 'Reserve a space' link
+        await page.get_by_role("link", name="Réservation d'un terrain").click()
         
         # Click on Badminton
-        await page.locator('a:has-text("Badminton")').click()
-        
+        await page.get_by_role("link", name="Badminton Badminton Consultez").click()
+
         # Select Neighborhood based on environment variable
         await page.get_by_text('Arrondissement Tous').click()
         
